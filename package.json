@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "dev": "nodemon server.js",
     "dev:watch": "nodemon --watch . --ext js,json server.js"
@@ -19,9 +19,13 @@
     "axios": "^1.11.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "jest": "^30.0.5",
+    "node-mocks-http": "^1.17.2",
     "nodemon": "^3.1.10"
   }
 }

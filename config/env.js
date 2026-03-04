@@ -30,5 +30,14 @@ if (!process.env.PORT) {
 module.exports = {
   NODE_ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
+  
+  // MPESA Configuration
+  MPESA_BASE_URL: process.env.MPESA_BASE_URL,
+  MPESA_CONSUMER_KEY: process.env.MPESA_CONSUMER_KEY,
+  MPESA_CONSUMER_SECRET: process.env.MPESA_CONSUMER_SECRET,
+  MPESA_SHORTCODE: process.env.MPESA_SHORTCODE,
+  MPESA_PASSKEY: process.env.MPESA_PASSKEY,
+  CALLBACK_URL: process.env.CALLBACK_URL,
+  
   // Add other environment variables here as needed
 };

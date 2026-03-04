@@ -1,6 +1,7 @@
+require('./config/env');
+
 const app = require('./app');
 const logger = require('./utils/logger');
-require('./config/env');
 
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';

@@ -3,6 +3,7 @@ const cors = require('cors');
 const logger = require('./utils/logger');
 const { errorHandler, notFound } = require('./middlewares/errorHandler');
 const routes = require('./routes');
+const { specs, swaggerUi } = require('./config/swagger');
 
 const app = express();
 
@@ -20,15 +21,15 @@ app.use(cors({
 
 // Request logging middleware
 app.use((req, res, next) => {
-  logger.info(`${req.method} ${req.path}`, {
-    ip: req.ip,
-    userAgent: req.get('User-Agent')
-  });
   next();
 });
 
+// Swagger Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+
 // Routes
 app.use('/api', routes);
+
 
 // Handle 404 errors
 app.use(notFound);
