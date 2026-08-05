@@ -57,7 +57,7 @@ const logger = require("../utils/logger");
 router.post("/stkpush", async (req, res, next) => {
   try {
     const { amount, phoneNumber, accountReference, transactionDesc } = req.body;
-
+    
     if (!amount || !phoneNumber || !accountReference || !transactionDesc) {
       return res.status(400).json({
         success: false,
